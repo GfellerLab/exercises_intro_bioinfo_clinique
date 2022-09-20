@@ -10,6 +10,7 @@ rm Week2/04aa322d-117d-4b83-8b26-ad0b04299275.wxs.aliquot_ensemble_masked.maf
 rm Week3/exercice_cours3_gene_expression_with_solutions.ipynb
 rm Week4/exercice_cours4_biomarkers_with_solutions.ipynb
 rm Week5/exercice_cours5_dimension_reduction_with_solutions.ipynb
+rm script_get_exercise.sh
 
 #copy files to each user
 cd /home
