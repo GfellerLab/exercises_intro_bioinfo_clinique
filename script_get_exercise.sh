@@ -4,25 +4,37 @@
 cd /home/jupyter-admin2
 git clone https://github.com/GfellerLab/exercises_intro_bioinfo_clinique
 cd exercises_intro_bioinfo_clinique
-rm Week1/exercise_week1_solution.ipynb
-rm Week2/exercise_week2_solution.ipynb
-rm Week2/04aa322d-117d-4b83-8b26-ad0b04299275.wxs.aliquot_ensemble_masked.maf
-rm Week3/exercice_cours3_gene_expression_with_solutions.ipynb
-rm Week4/exercice_cours4_biomarkers_with_solutions.ipynb
-rm Week5/exercice_cours5_dimension_reduction_with_solutions.ipynb
-rm script_get_exercise.sh
 
-#copy files to each user
+####################################################################################################
+#copy files to each user (rm solutions)
 cd /home
-for i in `ls | grep u[00-100]`
+
+week="Week2"
+filename="exercise_week2.ipynb"
+echo "Copying file $filename for $week"
+for i in `ls | grep u[00-300]`
 do
-	echo $i
-	cp -r /home/jupyter-admin2/exercises_intro_bioinfo_clinique/* $i
+	echo $i, $week
+	#makeing directory
+	mkdir /home/$i/$week
+	cp /home/jupyter-admin2/exercises_intro_bioinfo_clinique/$week/$filename $i/$week
 done
 
-#clean (remove files)
+
+####################################################################################################
+#### copy solution
+week="Week1"
+echo "Copying solution for $week "
+for i in `ls | grep u[00-300]`
+do
+	echo $i, $week
+	cp /home/jupyter-admin2/exercises_intro_bioinfo_clinique/$week/*solution* $i/$week
+done
+
+####################################################################################################
+#function to clean (remove ALL files)
 cd /home
-for i in `ls | grep u[00-100]`
+for i in `ls | grep u[00-300]`
 do
 	echo $i
 	rm -r $i/Week*
