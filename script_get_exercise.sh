@@ -1,5 +1,6 @@
 #for Jupyter-hub
 #connect to admin2
+#pwd gfellerlab
 
 cd /home/jupyter-admin2
 git clone https://github.com/GfellerLab/exercises_intro_bioinfo_clinique
@@ -10,13 +11,13 @@ cd exercises_intro_bioinfo_clinique
 cd /home
 
 week="Week2"
-filename="exercise_week2.ipynb"
+filename="exercise_week2_solution.ipynb"
 echo "Copying file $filename for $week"
 for i in `ls | grep u[00-300]`
 do
 	echo $i, $week
 	#makeing directory
-	mkdir /home/$i/$week
+	#mkdir /home/$i/$week
 	cp /home/jupyter-admin2/exercises_intro_bioinfo_clinique/$week/$filename $i/$week
 done
 
