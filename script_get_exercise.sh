@@ -16,7 +16,7 @@ echo "Copying file $filename for $week"
 for i in `ls | grep u[00-300]`
 do
 	echo $i, $week
-	#makeing directory
+	#making directory
 	mkdir /home/$i/$week
 	cp /home/jupyter-admin2/exercises_intro_bioinfo_clinique/$week/$filename $i/$week
 done
