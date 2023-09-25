@@ -10,27 +10,27 @@ cd exercises_intro_bioinfo_clinique
 #copy files to each user (rm solutions)
 cd /home
 
-week="Week2"
-filename="exercise_week2_solution.ipynb"
+week="Week1"
+filename="exercise_week1.ipynb"
 echo "Copying file $filename for $week"
 for i in `ls | grep u[00-300]`
 do
 	echo $i, $week
 	#makeing directory
-	#mkdir /home/$i/$week
+	mkdir /home/$i/$week
 	cp /home/jupyter-admin2/exercises_intro_bioinfo_clinique/$week/$filename $i/$week
 done
 
 
-####################################################################################################
-#### copy solution
-week="Week1"
-echo "Copying solution for $week "
-for i in `ls | grep u[00-300]`
-do
-	echo $i, $week
-	cp /home/jupyter-admin2/exercises_intro_bioinfo_clinique/$week/*solution* $i/$week
-done
+#####################################################################################################
+##### copy solution
+#week="Week1"
+#echo "Copying solution for $week "
+#for i in `ls | grep u[00-300]`
+#do
+#	echo $i, $week
+#	cp /home/jupyter-admin2/exercises_intro_bioinfo_clinique/$week/*solution* $i/$week
+#done
 
 ####################################################################################################
 #function to clean (remove ALL files)
