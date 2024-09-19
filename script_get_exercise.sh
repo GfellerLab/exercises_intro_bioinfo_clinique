@@ -18,7 +18,7 @@ do
 	echo $i, $week
 	#making directory
 	mkdir /home/$i/$week
-	cp /home/jupyter-admin2/exercises_intro_bioinfo_clinique/$week/$filename $i/$week
+	cp /home/jupyter-admin0/exercises_intro_bioinfo_clinique/$week/$filename $i/$week
 done
 
 
@@ -29,9 +29,9 @@ done
 #for i in `ls | grep u[00-300]`
 #do
 #	echo $i, $week
-#	cp /home/jupyter-admin2/exercises_intro_bioinfo_clinique/$week/*solution* $i/$week
+#	cp /home/jupyter-admin0/exercises_intro_bioinfo_clinique/$week/*solution* $i/$week
 #done
-
+#
 ####################################################################################################
 #function to clean (remove ALL files)
 cd /home
@@ -40,3 +40,6 @@ do
 	echo $i
 	rm -r $i/Week*
 done
+
+
+
