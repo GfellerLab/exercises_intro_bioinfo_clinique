@@ -6,6 +6,15 @@ cd /home/jupyter-admin2
 git clone https://github.com/GfellerLab/exercises_intro_bioinfo_clinique
 cd exercises_intro_bioinfo_clinique
 
+
+#### install package. For each user separately (manual installation)!!!
+# open a jupyter notebook
+# run:
+#!pip install pandas numpy scipy plotly scikit-survival scikit-learn umap h5py scikit-image matplotlib
+# restart kernel
+# log out and log in again
+# UPDATE: added this line to Week1 jupyter-notebook
+
 ####################################################################################################
 #copy files to each user (rm solutions)
 cd /home
@@ -19,6 +28,7 @@ do
 	#making directory
 	mkdir /home/$i/$week
 	cp /home/jupyter-admin0/exercises_intro_bioinfo_clinique/$week/$filename $i/$week
+	sudo chmod 777 $i/$week
 done
 
 
