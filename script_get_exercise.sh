@@ -2,7 +2,7 @@
 #connect to admin2
 #pwd gfellerlab
 
-cd /home/jupyter-admin2
+cd /home/jupyter-admin0
 git clone https://github.com/GfellerLab/exercises_intro_bioinfo_clinique
 cd exercises_intro_bioinfo_clinique
 
@@ -24,8 +24,8 @@ cd exercises_intro_bioinfo_clinique
 #copy files to each user (include/exclude solutions)
 
 cd /home
-week="Week1"
-include_solution=true
+week="Week4"
+include_solution=false
 echo "Copying file $filename for $week"
 
 for i in $(ls | grep u[00-300])
@@ -52,12 +52,12 @@ done
 
 ####################################################################################################
 #function to clean (remove ALL files)
-cd /home
-for i in `ls | grep u[00-300]`
-do
-	echo $i
-	rm -rf /home/$i/*
-done
+#cd /home
+#for i in `ls | grep u[00-300]`
+#do
+#	echo $i
+#	rm -rf /home/$i/*
+#done
 
 
 
