@@ -11,7 +11,7 @@ cd exercises_intro_bioinfo_clinique
 ## OPTION 1: For each user separately (manual installation)!!!
 # open a jupyter notebook
 # run:
-#!sudo pip install pandas numpy scipy plotly scikit-survival scikit-learn umap h5py scikit-image matplotlib
+#!sudo pip install pandas numpy scipy plotly scikit-survival scikit-learn umap h5py scikit-image matplotlib seaborn
 # restart kernel
 # log out and log in again
 # added this line to Week1 jupyter-notebook
@@ -33,16 +33,16 @@ do
     echo "$i, $week"
     # Making directory
     mkdir -p /home/$i/$week
-    
+
     if $include_solution; then
         for filename in $(ls /home/jupyter-admin0/exercises_intro_bioinfo_clinique/$week/)
         do
-            cp /home/jupyter-admin0/exercises_intro_bioinfo_clinique/$week/$filename /home/$i/$week/
+            cp -r /home/jupyter-admin0/exercises_intro_bioinfo_clinique/$week/$filename /home/$i/$week/
         done
     else
         for filename in $(ls /home/jupyter-admin0/exercises_intro_bioinfo_clinique/$week/ | grep -v solution)
         do
-            cp /home/jupyter-admin0/exercises_intro_bioinfo_clinique/$week/$filename /home/$i/$week/
+            cp -r /home/jupyter-admin0/exercises_intro_bioinfo_clinique/$week/$filename /home/$i/$week/
         done
     fi
 
